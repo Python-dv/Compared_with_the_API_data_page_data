@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getJSON获取数据</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <style type="text/css">
+        #divframe {
+            border: 1px solid #999;
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        .loadTitle {
+            background: #CCC;
+            height: 30px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $("#btn").click(function () {
+                $.getJSON("json/test3.json", function (data) {
+                    var $jsontip = $("#jsonTip");
+                    var strHtml = "读取的数据：<br/>";//存储数据的变量
+                    $jsontip.empty();//清空内容
+                    $.each(data, function (haha, info) {
+                        strHtml += "总共条数：" + info["total"] + "<br>";
+                        strHtml += "页数：" + info["start"] + "<br>";
+						strHtml += "每页条数：" + info["limit"] + "<br>";
+						strHtml += "<hr>"
+                        var infos = info["data"];
+                        $.each(infos, function (hehe, info2) {
+                            strHtml += "产品名称：" + info2["title"] + "<br>";
+                            strHtml += "产品简介：" + info2["subtitle"] + "<br>";
+							strHtml += "关于：" + info2["about"] + "<br>";
+							strHtml += "特点：" + info2["goals"] + "<br>";
+                            strHtml += "<hr>"
+							/*var infoss = infos["teachers"];
+                        	$.each(infoss, function (heehee, info3) {
+                            	strHtml += "公司：" + info3["title"] + "<br>";
+                            	strHtml += "昵称：" + info3["nickname"] + "<br>";
+								strHtml += "头像：" + info3["avatar"] + "<br>";
+                            	strHtml += "<hr>"
+                        	})*/
+						})
+                    })
+                    $jsontip.html(strHtml);//显示处理后的数据
+                })
+            })
+
+        })
+    </script>
+</head>
+<body>
+<div id="divframe">
+    <div class="loadTitle">
+        <input type="button" value="获取数据" id="btn"/>
+    </div>
+    <div id="jsonTip">
+    </div>
+</div>
+</body>
+</html>

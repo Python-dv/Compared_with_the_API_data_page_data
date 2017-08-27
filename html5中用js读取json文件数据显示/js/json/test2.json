@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "uname":"andy",
+    "unumber": 1,
+    "courseInfos": [
+      {
+        "id": 1,
+        "cname": "数学",
+        "caddress": "1号楼"
+      },
+      {
+        "id": 3,
+        "cname": "英语",
+        "caddress": "外教楼"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "uname": "zty",
+    "unumber": 2,
+    "courseInfos": [
+      {
+        "id": 2,
+        "cname": "化学",
+        "caddress": "综合楼"
+      },
+      {
+        "id": 3,
+        "cname": "英语",
+        "caddress": "外教楼"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "uname": "巩希波",
+    "unumber": 3,
+    "courseInfos": []
+  },
+  {
+    "id": 5,
+    "uname": "xiaoming",
+    "unumber": 4,
+    "courseInfos": []
+  }
+]
