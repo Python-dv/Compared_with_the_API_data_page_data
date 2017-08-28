@@ -1,0 +1,23 @@
+{
+    "brief": "ooooo",
+    "class_extid": 13,
+    "create_time": 1131783174,
+    "face_id": 4,
+    "flag    ": 6777217,
+    "flag_ext": 0,
+    "level": 0,
+    "max_member": 100,
+    "memo": "m~F~M0m~Zm~@~B",
+    "name": "10502",
+    "option": 2,
+    "ul": [
+        {
+            "flag": 4,
+            "u": 285
+        },
+        {
+            "flag": 4,
+            "u": 35
+        }
+    ]
+}
